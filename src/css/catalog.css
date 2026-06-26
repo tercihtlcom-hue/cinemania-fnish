@@ -1,0 +1,102 @@
+/* Catalog Hero */
+.catalog-hero {
+  padding: 120px 0 60px;
+  background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+  text-align: center;
+}
+
+.catalog-hero__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Search */
+.search {
+  display: flex;
+  gap: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.search__input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 20px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.search__input:focus {
+  border-color: var(--color-accent);
+}
+
+.search__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search__select {
+  padding: 14px 20px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.search__select:focus {
+  border-color: var(--color-accent);
+}
+
+.search__btn {
+  padding: 14px 32px;
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.search__btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* Catalog Results */
+.catalog__results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .catalog-hero {
+    padding: 100px 0 40px;
+  }
+
+  .catalog-hero__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search__input,
+  .search__select,
+  .search__btn {
+    width: 100%;
+  }
+
+  .catalog__results {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

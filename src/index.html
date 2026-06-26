@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinemania - Ana Sayfa</title>
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="./index.html" class="logo">Cinemania</a>
+      <nav class="nav">
+        <a href="./index.html" class="nav__link nav__link--active">Ana Sayfa</a>
+        <a href="./catalog.html" class="nav__link">Katalog</a>
+        <a href="./library.html" class="nav__link">Kütüphanem</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+        <span class="theme-toggle__icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <div class="hero__info" id="heroInfo">
+          <span class="hero__badge">Günün Filmi</span>
+          <h1 class="hero__title" id="heroTitle">Yükleniyor...</h1>
+          <p class="hero__overview" id="heroOverview"></p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" id="heroTrailerBtn">Fragman İzle</button>
+            <a href="./catalog.html" class="btn btn--secondary">Keşfet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Haftalık Trendler</h2>
+          <a href="./catalog.html" class="section__link">Tümünü Gör →</a>
+        </div>
+        <ul class="movie-list" id="trendsList"></ul>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Yakında Vizyonda</h2>
+        </div>
+        <ul class="movie-list" id="upcomingList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© 2024 Cinemania. Tüm hakları saklıdır.</p>
+      <button class="footer__team" id="teamBtn">Ekibimiz</button>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">&times;</button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="loader" id="loader">
+    <div class="loader__spinner"></div>
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Yukarı çık">↑</button>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
